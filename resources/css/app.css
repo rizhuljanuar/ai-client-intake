@@ -1,0 +1,101 @@
+:root {
+    color: #1f2937;
+    background: #f5f3ef;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.site-header {
+    border-bottom: 1px solid #d8d2c8;
+    background: #fffdf9;
+}
+
+.brand {
+    display: inline-block;
+    padding: 1rem clamp(1rem, 4vw, 4rem);
+    color: #1f2937;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #9a3412;
+    outline-offset: 3px;
+}
+
+.page-shell {
+    width: min(100% - 2rem, 56rem);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.intro-panel {
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border: 1px solid #d8d2c8;
+    border-radius: 0.75rem;
+    background: #fffdf9;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #9a3412;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+h1,
+h2 {
+    color: #111827;
+    line-height: 1.2;
+}
+
+h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(2.25rem, 8vw, 4.5rem);
+}
+
+.lede {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    font-size: 1.125rem;
+}
+
+.status-panel,
+.notes-panel {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #9a3412;
+    background: #f1eadf;
+}
+
+.status-panel h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.notes-panel summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (max-width: 42rem) {
+    .page-shell {
+        width: min(100% - 1rem, 56rem);
+        padding: 2rem 0;
+    }
+
+    .intro-panel {
+        padding: 1.25rem;
+    }
+}
