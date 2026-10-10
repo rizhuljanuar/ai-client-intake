@@ -99,3 +99,128 @@ h1 {
         padding: 1.25rem;
     }
 }
+
+.page-action {
+    margin-top: 2rem;
+}
+
+.button-link,
+.primary-button {
+    display: inline-block;
+    border: 2px solid #9a3412;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #9a3412;
+    color: #fffdf9;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover,
+.primary-button:hover {
+    background: #7c2d12;
+    border-color: #7c2d12;
+}
+
+.form-panel,
+.result-panel {
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 1px solid #d8d2c8;
+    border-radius: 0.75rem;
+    background: #fffdf9;
+}
+
+.intake-form {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.field-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.field-group label {
+    color: #111827;
+    font-weight: 700;
+}
+
+.field-group label span {
+    color: #4b5563;
+    font-weight: 400;
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    border: 1px solid #9ca3af;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    background: #ffffff;
+    color: #1f2937;
+    font: inherit;
+}
+
+.field-group textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus,
+.primary-button:focus-visible,
+.button-link:focus-visible {
+    outline: 3px solid #9a3412;
+    outline-offset: 3px;
+}
+
+.field-help {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.9375rem;
+}
+
+.field-error {
+    margin: 0;
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.error-panel {
+    margin-top: 1.5rem;
+    border: 1px solid #991b1b;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: #fef2f2;
+    color: #7f1d1d;
+}
+
+.error-panel h2 {
+    margin-top: 0;
+    color: #7f1d1d;
+    font-size: 1.125rem;
+}
+
+.submission-summary {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submission-summary div {
+    border-bottom: 1px solid #d8d2c8;
+    padding-bottom: 1rem;
+}
+
+.submission-summary dt {
+    color: #4b5563;
+    font-size: 0.9375rem;
+}
+
+.submission-summary dd {
+    margin: 0.25rem 0 0;
+    color: #111827;
+}

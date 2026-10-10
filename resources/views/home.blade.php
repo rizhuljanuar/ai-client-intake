@@ -9,6 +9,12 @@
             dan menyiapkan scope review untuk pemeriksaan manusia.
         </p>
 
+        <p class="page-action">
+            <a class="button-link" href="{{ route('intake.create') }}">
+                Isi formulir intake
+            </a>
+        </p>
+
         <div class="status-panel" aria-labelledby="status-title">
             <h2 id="status-title">Langkah berikutnya</h2>
             <p>{{ $nextStep }}</p>
