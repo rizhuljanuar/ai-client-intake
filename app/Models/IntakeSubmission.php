@@ -46,4 +46,9 @@ class IntakeSubmission extends Model
     {
         return $this->hasMany(SubmissionStatusHistory::class);
     }
+
+    public function scopeReviewDraft(): HasOne
+    {
+        return $this->hasOne(ScopeReviewDraft::class);
+    }
 }
