@@ -11,8 +11,8 @@ class HomeController extends Controller
     {
         return view('home', [
             'appName' => 'AI Client Intake',
-            'workflowStatus' => 'Fondasi aplikasi siap dipelajari',
-            'nextStep' => 'Menyiapkan model data intake',
+            'workflowStatus' => 'Alur review siap digunakan',
+            'nextStep' => 'Mulai dari data intake, lalu lanjutkan ke workspace reviewer.',
         ]);
     }
 }

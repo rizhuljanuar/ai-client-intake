@@ -18,12 +18,42 @@ body {
     background: #fffdf9;
 }
 
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: min(100% - 2rem, 72rem);
+    margin: 0 auto;
+}
+
 .brand {
     display: inline-block;
-    padding: 1rem clamp(1rem, 4vw, 4rem);
+    padding: 1rem 0;
     color: #1f2937;
     font-weight: 700;
     text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.25rem;
+}
+
+.site-nav a,
+.text-link,
+.workflow-list a {
+    color: #7c2d12;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.site-nav a:hover,
+.text-link:hover,
+.workflow-list a:hover {
+    color: #431407;
 }
 
 .brand:focus-visible,
@@ -89,7 +119,126 @@ h1 {
     font-weight: 700;
 }
 
+.home-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(14rem, 0.75fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    align-items: end;
+    padding: clamp(1.5rem, 5vw, 4rem) 0 clamp(3rem, 8vw, 6rem);
+}
+
+.home-intro-copy {
+    max-width: 42rem;
+}
+
+.home-intro h1 {
+    max-width: 9ch;
+}
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.home-next-step {
+    border-top: 2px solid #9a3412;
+    padding-top: 1rem;
+}
+
+.home-next-step h2,
+.workflow-overview h2 {
+    margin: 0;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.home-next-step p:last-child {
+    margin-bottom: 0;
+}
+
+.section-kicker {
+    margin: 0 0 0.5rem;
+    color: #9a3412;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.workflow-overview {
+    border-top: 1px solid #d8d2c8;
+    padding-top: 1.5rem;
+}
+
+.home-section-heading {
+    align-items: end;
+}
+
+.home-section-heading h2 {
+    max-width: 18ch;
+}
+
+.section-description {
+    max-width: 18rem;
+    margin: 0;
+    color: #4b5563;
+}
+
+.workflow-list {
+    display: grid;
+    gap: 0;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.workflow-list li {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: start;
+    border-top: 1px solid #d8d2c8;
+    padding: 1.25rem 0;
+}
+
+.workflow-index {
+    color: #9a3412;
+    font-weight: 700;
+}
+
+.workflow-list h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.1rem;
+}
+
+.workflow-list p {
+    max-width: 36rem;
+    margin: 0.35rem 0 0;
+}
+
+.workflow-list a {
+    white-space: nowrap;
+}
+
 @media (max-width: 42rem) {
+    .header-inner {
+        align-items: start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .brand {
+        padding-bottom: 0.5rem;
+    }
+
+    .site-nav {
+        padding-bottom: 1rem;
+    }
+
     .page-shell {
         width: min(100% - 1rem, 56rem);
         padding: 2rem 0;
@@ -97,6 +246,27 @@ h1 {
 
     .intro-panel {
         padding: 1.25rem;
+    }
+
+    .home-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .home-intro {
+        gap: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .home-section-heading {
+        align-items: start;
+    }
+
+    .workflow-list li {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+    }
+
+    .workflow-list a {
+        grid-column: 2;
     }
 }
 
@@ -525,5 +695,99 @@ td a {
     .item-heading {
         align-items: stretch;
         flex-direction: column;
+    }
+}
+
+.review-workspace {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.provenance-banner {
+    border: 2px solid #374151;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    background: #f9fafb;
+}
+
+.provenance-banner h2,
+.source-panel h2,
+.review-section h2 {
+    margin-top: 0;
+}
+
+.provenance-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+}
+
+.provenance-list div {
+    min-width: 9rem;
+}
+
+.provenance-list dt,
+.provenance-list dd {
+    margin: 0;
+}
+
+.provenance-list dt {
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.provenance-list dd {
+    font-weight: 700;
+}
+
+.review-section {
+    border-top: 1px solid #d8d2c8;
+    padding-top: 1.5rem;
+}
+
+.section-heading {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.source-label,
+.status-label,
+.count-label {
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.source-label {
+    margin: 0.5rem 0 0;
+}
+
+.source-label-ai {
+    color: #7c2d12;
+    font-weight: 700;
+}
+
+.source-label-reviewer {
+    color: #166534;
+    font-weight: 700;
+}
+
+.empty-inline {
+    margin: 1rem 0 0;
+    color: #4b5563;
+}
+
+@media (max-width: 42rem) {
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .provenance-list {
+        display: grid;
     }
 }

@@ -8,7 +8,14 @@
     </head>
     <body>
         <header class="site-header">
-            <a class="brand" href="{{ route('home') }}">AI Client Intake</a>
+            <div class="header-inner">
+                <a class="brand" href="{{ route('home') }}">AI Client Intake</a>
+                <nav class="site-nav" aria-label="Navigasi utama">
+                    <a href="{{ route('home') }}">Beranda</a>
+                    <a href="{{ route('intake.create') }}">Mulai intake</a>
+                    <a href="{{ route('reviewer.submissions.index') }}">Submission reviewer</a>
+                </nav>
+            </div>
         </header>
     
         <main class="page-shell">

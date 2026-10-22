@@ -96,7 +96,7 @@
     </section>
 
     <p class="review-warning">
-        Halaman ini belum menyediakan aksi approve atau reject. Keputusan manusia akan memakai versioning
-        dan approval workflow pada section berikutnya.
+        Draft ini belum dapat disetujui atau ditolak. Periksa sumber dan hasil analisis sebelum keputusan
+        manusia dicatat.
     </p>
 </section>
