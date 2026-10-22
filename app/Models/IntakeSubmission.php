@@ -6,6 +6,7 @@ use App\Enums\IntakeSubmissionStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -50,5 +51,16 @@ class IntakeSubmission extends Model
     public function scopeReviewDraft(): HasOne
     {
         return $this->hasOne(ScopeReviewDraft::class);
+    }
+
+    public function reviewers(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'intake_submission_reviewers')
+            ->withTimestamps();
+    }
+
+    public function versions(): HasMany
+    {
+        return $this->hasMany(ScopeVersion::class, 'intake_submission_id');
     }
 }
